@@ -1,16 +1,16 @@
 <ion-header>
-<div class = 'navbar'>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Entertainment</ion-title>
   </ion-navbar>
-</div>
 </ion-header>
 
+
 <ion-content padding>
-  <ion-card *ngFor = "let news of allNews ">
+  <ion-content padding>
+  <ion-card *ngFor = "let news of enterNews ">
     <img src="{{news.urlToImage}}"/>
     <ion-card-content>
       <ion-card-title>
@@ -20,7 +20,7 @@
        <strong><i>{{ news.publishedAt }}</i></strong>
       </p>
       <p>
-      Author:<strong><i>  {{ news.author }}</i></strong>
+      <strong><i> {{ news.author }}</i></strong>
       </p>
       <p>
        {{ news.description }}
@@ -30,5 +30,4 @@
        <ion-icon name="bookmark">save</ion-icon>
     </ion-card-content>
   </ion-card>
-
 </ion-content>
